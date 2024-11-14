@@ -92,11 +92,11 @@ First, clone the repository to your local machine using Git:
 ## Testing
 
 ### Test Cases
-- **Untagged Entries: ** Test with flow log entries that do not match any lookup entries to ensure they are tagged as Untagged.
-- **Case Insensitivity: ** Verify that protocol names and tags are matched case-insensitively
-- **Invalid Entries: ** The program skips invalid entries and logs a warning.
-- **Lookup Table: ** Include multiple mappings for the same tag to test aggregation.
-- **Flow Logs: ** Verify that each log entry is correctly parsed and processed.
+- Untagged Entries: Test with flow log entries that do not match any lookup entries to ensure they are tagged as Untagged.
+- Case Insensitivity: Verify that protocol names and tags are matched case-insensitively
+- Invalid Entries: The program skips invalid entries and logs a warning.
+- Lookup Table: Include multiple mappings for the same tag to test aggregation.
+- Flow Logs: Verify that each log entry is correctly parsed and processed.
 
 ### How to Test
 1. Place the flow log (`logs.txt`) and lookup table (`lookup.csv`) in the `data/` directory.
