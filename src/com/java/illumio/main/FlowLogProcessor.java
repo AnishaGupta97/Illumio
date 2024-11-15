@@ -62,7 +62,7 @@ public class FlowLogProcessor {
         }
     }
 
-    public void generateOutput(String outputDirectory) throws IOException {
+    public String generateOutput(String outputDirectory) throws IOException {
         // Create output directory if it doesn't exist
         FileUtil.createDirectoryIfNotExists(outputDirectory);
 
@@ -72,6 +72,7 @@ public class FlowLogProcessor {
 
         // Write to the output file
         FileUtil.writeOutput(outputFilePath, tagCounts, portProtocolCounts);
+        return outputFilePath;
     }
 
     /**
@@ -87,8 +88,8 @@ public class FlowLogProcessor {
             // Process flow log entries from specified file
             processor.processFlowLogs("data/flowlogs.txt");
             // Generate output file with results
-            processor.generateOutput("output");
-            System.out.println("Processing complete. Check output.txt for results.");
+            String outputFilePath = processor.generateOutput("output");
+            System.out.println("Processing complete. Output file generated at: " + outputFilePath);
         } catch (Exception e) {
             // Print stack trace in case of errors
             e.printStackTrace();
