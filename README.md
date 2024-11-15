@@ -85,9 +85,9 @@ First, clone the repository to your local machine using Git:
 ### Run the Program
 1. Execute the program with:
     ```bash
-    java -cp bin com.example.flowlogprocessor.main.FlowLogProcessor
+    java -cp bin com.java.illumio.main.FlowLogProcessor
     ```
-3. The program will generate the output files in the output directory, which will be created if it doesn't exist..
+3. The program will generate the output files in the output directory, which will be created if it doesn't exist. The output will be in the form of `output_YYYYMMDD_HHmmss.txt`
 
 ## Testing
 
