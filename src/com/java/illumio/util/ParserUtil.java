@@ -14,6 +14,10 @@ public class ParserUtil {
      * @return a LookupEntry object or null if parsing fails
      */
     public static LookupEntry parseLookupEntry(String line) {
+        if (line.trim().isEmpty()) {
+            // Skip empty lines without logging a warning
+            return null;
+        }
         String[] parts = line.split(",");
         if (parts.length == 3) {
             try {

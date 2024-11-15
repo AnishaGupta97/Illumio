@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * Author: Anisha Gupta
  * The FlowLogProcessor class processes flow log data by matching entries with a lookup table,
  * generating tag counts and port/protocol combination counts, and writing the output to a file.
  */
@@ -18,7 +19,6 @@ public class FlowLogProcessor {
     // Map to store lookup entries based on destination port and protocol
     private Map<String, LookupEntry> lookupMap = new HashMap<>();
     // Map to store counts of tags found in the flow logs
-
     private Map<String, Integer> tagCounts = new HashMap<>();
     // Map to store counts of port/protocol combinations found in the flow logs
     private Map<String, Integer> portProtocolCounts = new HashMap<>();
